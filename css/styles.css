@@ -581,6 +581,194 @@
             transform: translateY(0);
         }
 
+        /* School Uniform Partnerships */
+        .partnerships-section {
+            padding: 5rem 0;
+            background-color: #f9fafb;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-tagline {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-tagline span {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 600;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-tagline span::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            color: var(--gray);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .partnerships-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .partnership-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border-top: 4px solid var(--secondary);
+            transition: all 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .partnership-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(26, 35, 126, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+            z-index: 0;
+            transition: all 0.4s ease;
+        }
+
+        .partnership-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .partnership-card:hover::before {
+            color: rgba(26, 35, 126, 0.05);
+            transform: scale(1.1);
+        }
+
+        .school-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(26, 35, 126, 0.2);
+        }
+
+        .partnership-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            transition: color 0.4s ease;
+        }
+
+        .partnership-card:hover h3 {
+            color: var(--secondary);
+        }
+
+        .partnership-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+            transition: all 0.4s ease;
+        }
+
+        .partnership-card:hover p {
+            color: var(--dark);
+        }
+
+        .partnership-details {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 1;
+        }
+
+        .partnership-details p {
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+            color: var(--gray);
+            transition: color 0.4s ease;
+        }
+
+        .partnership-card:hover .partnership-details p {
+            color: var(--dark);
+        }
+
+        .school-logo {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary);
+            font-size: 1.5rem;
+            border: 3px solid var(--primary-light);
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .partnership-card:hover .school-logo {
+            border-color: var(--secondary);
+            transform: scale(1.1);
+        }
+
+        .partnerships-cta {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .partnerships-cta .btn {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .partnerships-cta .btn i {
+            margin-right: 8px;
+        }
+
         /* Testimonials Section */
         #testimonials {
             position: relative;
