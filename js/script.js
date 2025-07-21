@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form elements
             const nameInput = document.getElementById('name');
             const phoneInput = document.getElementById('phone');
+            const emailInput = document.getElementById('email');
             const serviceSelect = document.getElementById('service');
             const messageInput = document.getElementById('message');
             
@@ -126,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const formData = {
                 name: nameInput.value.trim(),
                 phone: phoneInput.value.trim(),
+                email: emailInput.value.trim(),
                 service: serviceSelect.value,
                 message: messageInput.value.trim()
             };
@@ -156,6 +158,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             } else if (!/^[0-9\+\-\s\(\)]{10,}$/.test(formData.phone)) {
                 showError('Please enter a valid phone number', phoneInput);
+                return;
+            }
+            
+            if (!formData.email) {
+                showError('Please enter your email address', emailInput);
+                return;
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+                showError('Please enter a valid email address', emailInput);
                 return;
             }
             
