@@ -173,6 +173,17 @@
             color: white;
         }
 
+        .btn-outline-white {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline-white:hover {
+            background: white;
+            color: var(--primary);
+        }
+
         .btn-accent {
             background: var(--secondary);
         }
@@ -197,6 +208,7 @@
             width: 100%;
             z-index: 1000;
             background: rgba(255, 255, 255, 0.98);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.4s ease;
