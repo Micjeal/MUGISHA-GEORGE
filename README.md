@@ -86,4 +86,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Contact
 
+<<<<<<< HEAD
 For partnership inquiries or support, please contact [micknick168@gmail.com]
+=======
+For partnership inquiries or support, please contact [your-email@example.com]
+>>>>>>> 488096f (image update)
