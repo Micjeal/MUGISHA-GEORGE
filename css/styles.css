@@ -747,21 +747,307 @@
             color: var(--dark);
         }
 
+        /* Partnerships Section */
+        .partnerships-section {
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partnerships-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .partnerships-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .partnership-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border-top: 4px solid var(--secondary);
+            transition: all 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .partnership-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(26, 35, 126, 0.1);
+            font-family: Georgia, serif;
+            line-height: 1;
+            z-index: 0;
+            transition: all 0.4s ease;
+        }
+
+        .partnership-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .partnership-card:hover::before {
+            color: rgba(26, 35, 126, 0.05);
+            transform: scale(1.1);
+        }
+
+        .partnership-content {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
         .school-logo {
-            width: 60px;
-            height: 60px;
-            background: var(--primary-light);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            color: var(--primary);
-            font-size: 1.5rem;
-            border: 3px solid var(--primary-light);
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 6px 15px rgba(26, 35, 126, 0.2);
             transition: all 0.4s ease;
+        }
+
+        .partnership-card:hover .school-logo {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .partnership-card h3 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .partnership-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+        }
+
+        .partnership-card p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .partnership-details {
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .partnership-details p {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+
+        .partnership-details strong {
+            color: var(--primary);
+        }
+
+        .partnership-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .partnership-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .school-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 6px 15px rgba(26, 35, 126, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             z-index: 1;
+        }
+
+        .partnership-card:hover .school-logo {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 25px rgba(26, 35, 126, 0.3);
+        }
+
+        .partnership-card h3 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.2rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .partnership-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 3px;
+            transition: all 0.4s ease;
+        }
+
+        .partnership-card:hover h3::after {
+            width: 100px;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+        }
+
+        .partnership-details {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .partnership-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px dashed rgba(0, 0, 0, 0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .partnerships-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .partnerships-cta .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .partnerships-cta .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .partnerships-cta .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.6s;
+        }
+
+        .partnerships-cta .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Smooth scroll behavior */
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+                scroll-padding-top: 100px; /* Account for fixed header */
+            }
+            
+            /* Custom scrollbar */
+            ::-webkit-scrollbar {
+                width: 10px;
+                height: 10px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: linear-gradient(var(--primary), var(--secondary));
+                border-radius: 5px;
+                transition: background 0.3s ease;
+            }
+            
+            ::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(var(--secondary), var(--primary));
+            }
+            
+            /* Fade-in animation for sections */
+            .fade-in {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            
+            .fade-in.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* School logo styling */
+        .school-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            box-shadow: 0 6px 15px rgba(26, 35, 126, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 1;
+            border: 3px solid var(--primary-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .partnership-card:hover .school-logo {
@@ -907,7 +1193,77 @@
             transform: scale(1.1);
         }
 
-        /* Contact Section */
+        /* Business Cards Section */
+.business-cards {
+    background-color: var(--light-gray);
+    padding: 5rem 0;
+    position: relative;
+}
+
+.business-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.business-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+    width: 100%;
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.business-card:hover .card-image {
+    transform: scale(1.02);
+}
+
+.business-description {
+    max-width: 900px;
+    margin: 3rem auto 0;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark);
+    padding: 0 1.5rem;
+}
+
+.business-description p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .business-cards-container {
+        gap: 2rem;
+    }
+    
+    .business-card {
+        max-width: 100%;
+    }
+    
+    .business-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Contact Section */
         #contact {
             background-color: var(--light-gray);
         }

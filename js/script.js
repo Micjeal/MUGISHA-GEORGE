@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelector('.nav-links');
     const links = document.querySelectorAll('.nav-links li a');
     const backToTopButton = document.getElementById('backToTop');
+    
+    // Add fade-in class to partnership cards for animation
+    const partnershipCards = document.querySelectorAll('.partnership-card');
+    partnershipCards.forEach((card, index) => {
+        card.classList.add('fade-in');
+        // Stagger the animation delay for each card
+        card.style.transitionDelay = `${index * 0.1}s`;
+    });
 
     // Mobile menu toggle
     if (hamburger && navLinks) {
@@ -63,22 +71,30 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Animation on scroll
+    function isElementInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
     function animateOnScroll() {
-        const elements = document.querySelectorAll('.product-card, .testimonial-card, .gallery-item, .feature-item');
+        const elements = document.querySelectorAll('.product-card, .testimonial-card, .gallery-item, .feature-item, .partnership-card');
         
         elements.forEach(element => {
-            const elementPosition = element.getBoundingClientRect().top;
-            const screenPosition = window.innerHeight / 1.2;
-            
-            if (elementPosition < screenPosition) {
+            if (isElementInViewport(element)) {
                 element.style.opacity = '1';
                 element.style.transform = 'translateY(0)';
+                element.classList.add('visible');
             }
         });
     }
 
     // Initialize animations
-    const elements = document.querySelectorAll('.product-card, .testimonial-card, .gallery-item, .feature-item');
+    const elements = document.querySelectorAll('.product-card, .testimonial-card, .gallery-item, .feature-item, .partnership-card');
     elements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';

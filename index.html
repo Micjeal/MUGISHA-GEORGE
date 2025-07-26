@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Content Security Policy with Google Maps and other necessary resources -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://maps.googleapis.com https://maps.gstatic.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://maps.googleapis.com https://fonts.gstatic.com;
+        font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:;
+        img-src 'self' data: https: *.google.com *.googleapis.com *.gstatic.com;
+        frame-src 'self' https://www.google.com https://maps.google.com https://www.google.com/maps https://*.google.com/maps https://*.googleapis.com https://*.gstatic.com;
+        connect-src 'self' http://localhost:3000 https://*.googleapis.com https://maps.googleapis.com;
+        object-src 'none';
+    ">
     <title>Mugisha & Family Super Tailors | Kabwohe, Uganda</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Other stylesheets -->
     <link href="css/styles.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧵</text></svg>">
 </head>
 <body>
@@ -441,87 +457,27 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="partnerships-cta">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-handshake"></i> Partner With Us for Your School Uniform Needs
-                </a>
-            </div>
-
-                <!-- School Card 6 -->
-                <div class="partnership-card">
-                    <div class="school-logo">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <h3>St. Johns Nyabwina Secondary School</h3>
-                    <p>St. Johns Nyabwina SS has partnered with us to maintain a professional student appearance throughout the school year.</p>
-                    <div class="partnership-details">
-                        <p><strong>Special Features:</strong> Quality tailoring and custom embroidery (e.g., school badges)</p>
-                        <p><strong>Additional Services:</strong> Optional rainy season gear available on request</p>
-                    </div>
+    <!-- Business Cards Section -->
+    <section id="business-cards" class="section-padding">
+        <div class="container">
+            <h2>Our Business Cards</h2>
+            <div class="business-cards-container">
+                <div class="business-card">
+                    <a href="images/card1.jpg" download="Mugisha_Tailoring_Card1.jpg">
+                        <img src="images/card1.jpg" alt="Business Card Front" class="card-image">
+                    </a>
                 </div>
-
-                <!-- School Card 7 -->
-                <div class="partnership-card">
-                    <div class="school-logo">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <h3>Kasheshero Girls Secondary School</h3>
-                    <p>We are proud to supply Kasheshero Girls with uniforms that speak to their identity as future-ready young women.</p>
-                    <div class="partnership-details">
-                        <p><strong>Uniform Packages:</strong> Include formalwear and activity-specific attire</p>
-                        <p><strong>Quality:</strong> Tailored with high-grade textiles and stitching for longevity</p>
-                        <p><strong>Focus:</strong> Ensuring each girl receives a uniform that fits well and builds confidence</p>
-                    </div>
-                </div>
-
-                <!-- School Card 8 -->
-                <div class="partnership-card">
-                    <div class="school-logo">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <h3>Kinoni Girls School</h3>
-                    <p>At Kinoni Girls, where traditional values meet modern learning, our uniform supply plays a role in preserving a strong institutional identity.</p>
-                    <div class="partnership-details">
-                        <p><strong>Service:</strong> Full-service delivery from measuring to packaging</p>
-                        <p><strong>Support:</strong> Repairs and replacement programs for long-term partners</p>
-                        <p><strong>Focus:</strong> Careful attention to detail in every uniform</p>
-                    </div>
-                </div>
-
-                <!-- School Card 9 -->
-                <div class="partnership-card">
-                    <div class="school-logo">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <h3>Nyakayojo Secondary School</h3>
-                    <p>Nyakayojo SS, a co-educational school, benefits from our ability to handle large-scale mixed uniform orders for both boys and girls.</p>
-                    <div class="partnership-details">
-                        <p><strong>Products:</strong> Tailored blouses, skirts, shirts, and trousers</p>
-                        <p><strong>Logistics:</strong> Automated order tracking and reliable delivery system</p>
-                        <p><strong>Service:</strong> Smooth supply operations every term</p>
-                    </div>
-                </div>
-
-                <!-- School Card 10 -->
-                <div class="partnership-card">
-                    <div class="school-logo">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <h3>Bishop McAllister Secondary School</h3>
-                    <p>As a faith-based institution known for integrity and academic discipline, Bishop McAllister SS partners with us to provide well-fitted, standardized, and ethically produced uniforms.</p>
-                    <div class="partnership-details">
-                        <p><strong>Range:</strong> Complete uniforms for both boys and girls</p>
-                        <p><strong>Quality:</strong> Hallmark of Mugisha & Family craftsmanship</p>
-                        <p><strong>Service:</strong> Tailored with care and delivered with precision to reflect the school's values</p>
-                    </div>
+                <div class="business-card">
+                    <a href="images/card2.jpg" download="Mugisha_Tailoring_Card2.jpg">
+                        <img src="images/card2.jpg" alt="Business Card Back" class="card-image">
+                    </a>
                 </div>
             </div>
-
-            <div class="partnerships-cta">
-                <a href="#contact" class="btn btn-primary">
-                    <i class="fas fa-handshake"></i> Partner With Us for Your School Uniform Needs
-                </a>
+            <div class="business-description">
+                <p>At Mugisha & Family Tailoring, we take pride in crafting exceptional custom-tailored garments that reflect our commitment to quality and attention to detail. With years of experience in the industry, we've built a reputation for excellence in creating school uniforms, corporate wear, and traditional attire. Our skilled tailors combine traditional techniques with modern designs to deliver garments that not only fit perfectly but also stand the test of time. We believe that great style begins with quality craftsmanship and ends with customer satisfaction. Let us bring your sartorial vision to life with our expert tailoring services.</p>
             </div>
         </div>
     </section>
@@ -666,6 +622,55 @@
     <div class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </div>
-<script src="js/script.js"></script>
+    
+    <!-- Chatbot Button -->
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open Chat">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+    
+    <!-- Chatbot Styles -->
+    <link href="css/chatbot.css" rel="stylesheet">
+
+    <!-- Load Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    <!-- Load font loader -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Load Google Fonts
+        const googleFonts = document.createElement('link');
+        googleFonts.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap';
+        googleFonts.rel = 'stylesheet';
+        document.head.appendChild(googleFonts);
+
+        // Load Font Awesome
+        const fontAwesome = document.createElement('link');
+        fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+        fontAwesome.rel = 'stylesheet';
+        document.head.appendChild(fontAwesome);
+    });
+    </script>
+    
+    <!-- Load chatbot scripts -->
+    <script src="js/chatbot-knowledge.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>
+    // Wait for window to be fully loaded including all resources
+    window.addEventListener('load', function() {
+        // Add a small delay to ensure everything is ready
+        setTimeout(function() {
+            if (typeof initChatbot === 'function') {
+                try {
+                    initChatbot();
+                } catch (error) {
+                    console.error('Error initializing chatbot:', error);
+                }
+            }
+        }, 500);
+    });
+    </script>
+    
+    <!-- Main application script -->
+    <script src="js/script.js"></script>
 </body>
 </html>
