@@ -105,8 +105,6 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(animateOnScroll, 500);
     window.addEventListener('scroll', animateOnScroll);
 
-
-
     // Form Submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
