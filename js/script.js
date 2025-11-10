@@ -105,26 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(animateOnScroll, 500);
     window.addEventListener('scroll', animateOnScroll);
 
-    // Product card hover effect
-    const productCards = document.querySelectorAll('.product-card');
-    productCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const x = e.pageX - card.getBoundingClientRect().left;
-            const y = e.pageY - card.getBoundingClientRect().top;
-            
-            const centerX = card.offsetWidth / 2;
-            const centerY = card.offsetHeight / 2;
-            
-            const angleX = (y - centerY) / 20;
-            const angleY = (centerX - x) / 20;
-            
-            card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-10px) scale(1.02)`;
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(-10px) scale(1.02)';
-        });
-    });
+
 
     // Form Submission
     const contactForm = document.getElementById('contactForm');
